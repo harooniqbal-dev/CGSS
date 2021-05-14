@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+{{-- <!DOCTYPE html>
 <html>
 <head>
 	<title>CGSS Achievmetents</title>
@@ -619,4 +621,4 @@
 
 </body>
 
-</html>
+</html> --}}

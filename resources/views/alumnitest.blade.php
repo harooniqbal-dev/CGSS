@@ -5,7 +5,7 @@
 		Alumni CRUD
 	</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
 	<div class="jumbotron">
@@ -31,15 +31,9 @@
 					<label class="custome-file-label"></label>
 					
 				</div>
-
-				
 			</div>
-			
 			<button type="submit" class="btn btn-primary">Save Data</button>
 		</form>
-		
 	</div>
-
-
 </body>
 </html>

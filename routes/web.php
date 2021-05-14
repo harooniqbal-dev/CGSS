@@ -11,10 +11,8 @@
 |
 */
 
- Route::get('/', 'CGSScontroller@index');
- Route::get('/master',function()
- {return view('master');
- });
+Route::get('/', 'CGSScontroller@index');
+
 Route::get('/CGSS', 'CGSScontroller@index');
 
 Route::get('/alumni', 'Alumnicontroller@display');

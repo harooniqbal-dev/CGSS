@@ -1,13 +1,16 @@
 @extends('app')
-@section('title', 'contact')
+@section('title', 'Contact')
+
+@section('cssfile')
+<link rel="stylesheet" type="text/css" href="{{asset('newcssfile/contact.css')}}">
+@endsection
+
 @section('content')
-<section class="htc__contact__area ptb--80 bg__white" style="padding-top:30px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+<section class="htc__contact__area">
+            <div class="contact__row">
+               
                     <div class="contact__wrap">
-                        <h2 class="title__style--2">Contact Info</h2>
-                        <p></p>
+                        <h2 class="heading__style">Contact Info</h2>
                         <div class="htc__contact__inner">
                             <!-- Start Single Address -->
                             <div class="contact__address">
@@ -25,7 +28,7 @@
                                     <span>phone</span>
                                 </div>
                                 <p><a href="tel:+00123456789">
-048 376 9683</a></p>
+                                048 376 9683</a></p>
                             </div>
                             <!-- End Single Address -->
                             <!-- Start Single Address -->
@@ -39,60 +42,54 @@
                             <!-- End Single Address -->
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 sm-mt-40 xs-mt-40">
-                
-                    <div class="htc__contact__form__wrap">
+                           
+                    <div class="contact__form">
                         <h2 class="contact__title">Send A Message</h2>
                         <div class="form-output">
-                            <p class="form-messege">
+                        <p class="form-messege">
                             @if(Session::has('message'))
-    @component('components.alert')
-    {{ Session::get('message') }}
-@endcomponent
-@endif
-                  </p>
+                            @component('components.alert')
+                            {{ Session::get('message') }}
+                            @endcomponent
+                            @endif
+                        </p>
                         </div>
-                        <div class="contact-form-wrap">
-
-                        <form action="submitcontact" method="POST" style="margin:40px;">
-    @csrf
-    <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" id="inputname" name="name" value="{{ old('name') }}" placeholder="Your Name*">
-      @error('name')
-    <span style="color:#f36371;">{{ $message }}</span>
-@enderror
-    </div>
-<div class="form-group col-md-6">
-      <input type="email" class="form-control" id="inputemail" name="email" value="{{ old('email') }}" placeholder="Your Email *">
- @error('email')
-    <span style="color:#f36371;">{{ $message }}</span>
-@enderror
-    </div>
-  </div>
-<div class="form-group">
-    <input type="text" class="form-control" id="inputsubject" name="subject" value="{{ old('subject') }}" placeholder="subject">
-    @error('subject')
-    <span style="color:#f36371;">{{ $message }}</span>
-@enderror
-  </div>
-<div class="form-group">
-    <textarea class="form-control" id="message" rows="4" placeholder="Message" name="message" value="{{ old('message') }}"></textarea>
-    @error('message')
-    <span style="color:#f36371;">{{ $message }}</span>
-@enderror   
-  </div>
-<div class="contact-btn">
-                                    <button type="submit" class="htc__btn btn--theme" >Submit</button> 
-                            
-                                </div>
-    </form>
-                        </div>
-                       
+            <div class="contact-form-wrap">
+                <form action="submitcontact" method="POST">
+                    @csrf
+                <div class="form__row">
+                    <div class="input__div left__input">
+                        <input type="text" id="inputname" name="name" value="{{ old('name') }}" placeholder="Your Name*">
+                        @error('name')
+                        <span style="color:#f36371;font-size: 12px;">{{ $message }}</span>
+                        @enderror
                     </div>
-                </div>
+                    <div class="input__div right__input">
+                        <input type="email" id="inputemail" name="email" value="{{ old('email') }}" placeholder="Your Email *">
+                        @error('email')
+                            <span style="color:#f36371;font-size: 12px;">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    </div>
+                        <div class="form-group">
+                            <input type="text" id="inputsubject" name="subject" value="{{ old('subject') }}" placeholder="Subject">
+                            @error('subject')
+                            <span style="color:#f36371;font-size: 12px;">{{ $message }}</span>
+                        @enderror
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Message" name="message" value="{{ old('message') }}"></textarea>
+                            @error('message')
+                            <span style="color:#f36371;font-size: 12px;">{{ $message }}</span>
+                        @enderror   
+                        </div>
+                                <div class="contact-btn">
+                                    <button type="submit" class="htc__btn btn--theme" >Submit</button> 
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
             </div>
-        </div>
+   
     </section>
 @endsection

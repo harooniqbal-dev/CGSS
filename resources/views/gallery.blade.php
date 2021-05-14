@@ -1,43 +1,38 @@
 @extends('app')
-@section('title', 'gallery')
+@section('cssfile')
+<link rel="stylesheet" type="text/css" href="stylefile/lightbox.min.css">   
+<link rel="stylesheet" type="text/css" href="{{asset('newcssfile/gallery.css')}}">
+@endsection
+
+@section('title', 'Gallery')
 @section('content')
-                     <div class="container">
-                     <div class="External__body">
-                     <h2 class="External__title">CGSS Gallery</h2>
-                     </div> 
-
-<div class="row">
-
-    <div class="col-lg-12">
-    <ul class="filters text-center" style='padding:0px;margin:0px;'>
-          <li class="active" data-filter="*"><a href="#!">All</a></li>
-          <li class="active" data-filter=".youtube"><a href="#!">Videos</a></li>
-            @foreach ($data_title as $data)
-         <li data-filter=".class{{$data->id}}"><a href="#!">{{$data->Title}}</a></li>
-@endforeach
-        </ul>  
-        <div class="projects">
-
-            <div class="row">
-                
-            @foreach ($data_array as $gallery_data)
-@foreach ($gallery_data as $data)
-<div class="col-lg-4 item class{{$data->title_id}}">                
-                <div class="card">
-                    <div class="card-head" style=" overflow: hidden; cursor: zoom-in;">
+<div class="cgss__gallery_image">
+    <h2 class="heading__style">CGSS Gallery</h2>
+    <div class="fliter__list">
+        <ul class="filters text-center" style='padding:0px;margin:0px;'>
+            <li class="active" data-filter="*"><a href="#!">All</a></li>
+            <li data-filter=".youtube"><a href="#!">Videos</a></li>
+              @foreach ($data_title as $data)
+           <li data-filter=".class{{$data->id}}"><a href="#!">{{$data->Title}}</a></li>
+        @endforeach
+      </ul>  
+    </div>
+<div class="projects">
+    <div class="image__row">      
+        @foreach ($data_array as $gallery_data)
+        @foreach ($gallery_data as $data)
+        <div class="image__item item class{{$data->title_id}}">                
+                <div>
                     <a href="{{asset('upload/gallery/'.$data->photo)}}" data-lightbox="mygallery" data-title="@php
-$posts= App\Title::find($data->title_id);
-echo $posts->Title;
-@endphp"> <img src="upload/gallery/{{$data->photo}}" alt="Mountains" style="height:200px;width:100%"></a>    
-                    </div>
-
-
+                    $posts= App\Title::find($data->title_id);
+                    echo $posts->Title;
+                    @endphp"> <img src="upload/gallery/{{$data->photo}}" alt="Mountains" style="height:200px;width:100%"></a>    
                 </div>
-            </div>
-@endforeach
-@endforeach
-<div class="item youtube">
-    <div class="row ">
+        </div>
+        @endforeach
+        @endforeach
+    </div>
+   <div class="item youtube">
      <?php 
 //Get videos from channel by YouTube Data API
      $API_key    = 'AIzaSyBGrI5mdHSxIrhwNPWub4sFbPqT5iwSwTw';
@@ -50,63 +45,17 @@ echo $posts->Title;
     //Embed video
         
         if(isset($item->id->videoId)){
-            echo '<div class="col">
-            <iframe "width="400" height="200" src="https://www.youtube.com/embed/'.$item->id->videoId.'" frameborder="0" allowfullscreen></iframe>
-            <h2>'. $item->snippet->title .'</h2>
+            echo '<div class="youtube__item">
+            <iframe "width="500" height="200" src="https://www.youtube.com/embed/'.$item->id->videoId.'" frameborder="0" allowfullscreen></iframe>
             </div>';
         }
     }
     ?>
-        
-    </div>
-    
-</div>
-                
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-
-
-   <!-- <div class="container">
-    <div class="External__body">
-       <h2 class="External__title" style="    margin-top: 0px;
-       margin-bottom: 5px;
-       padding-bottom: 0px;">Event Videos</h2>
-   </div> 
-</div> -->
-<!-- <div class="main" style="padding:0px 0px;"> 
-    <div class="row publication">
-        <div class="column" style="overflow:hidden;padding:0px">
-            <div class="content">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/ZOgVVDRc6r0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="column" style="overflow:hidden;padding:0px">
-            <div class="content">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/WyDPMaw01oI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="column" style="overflow:hidden;padding:0px">
-            <div class="content">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/shRX3575kMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="column" style="overflow:hidden;padding:0px">
-            <div class="content">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/shRX3575kMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <!-- END GRID -->
-    </div>
-    <!-- END MAIN -->
-</div> -->
+  </div>
+  
+     </div>
+           </div>
+            
 
 @endsection
 @section('javascriptContent')

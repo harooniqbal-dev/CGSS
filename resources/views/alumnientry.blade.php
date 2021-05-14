@@ -84,39 +84,7 @@
 
   	</div>
   </div>
-  <!-- Model ends here-->
-	<!-- <div class="jumbotron">
-
-		<h2>Alumni Entry Form</h2>
-		<form action="{{route('addalumni')}}" method="post" enctype="multipart/form-data">
-			@csrf
-			<div class="form-group">
-				<label>Name</label>
-				<input type="text" class="form-control" name="name" placeholder="Enter Your Name">
-			</div>
-			<div class="form-group">
-				<label>Occupation</label>
-				<input type="text" class="form-control" placeholder="Enter Student Today's Occupation" name="ocup">
-			</div>
-			<div class="form-group">
-				<label>Desciption </label>
-				<input type="text" class="form-control" placeholder="Enter Description here" name="description">
-			</div>
-
-			<div class="input-group">
-				<div class="custome-file">
-					<input type="file" name="image" class="custome-file-input">
-					<label class="custome-file-label"></label>
-					
-				</div>
-
-				
-			</div>
-			
-			<button type="submit" class="btn btn-primary">Save Data</button>
-		</form>
-		
-	</div> -->
+ 
 	<div class="container">
 		<div class="">
 			<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Add Data</button>
@@ -182,31 +150,21 @@
         <form action="{{route('addalumni')}}" method="post" enctype="multipart/form-data">
         	@csrf
         <div class="modal-body">
-          
-			
 			<div class="form-group">
 				<label>Name</label>
 				<input type="text" class="form-control" name="name" placeholder="Enter Your Name">
 			</div>
-			<!-- <div class="form-group">
-				<label>Occupation</label>
-				<input type="text" class="form-control" placeholder="Enter Student Today's Occupation" name="ocup">
-			</div> -->
 			<div class="form-group">
 				<label>Desciption </label>
 				<input type="text" class="form-control" placeholder="Enter Description here" name="description">
 			</div>
-
 			<div class="input-group">
 				<div class="custome-file">
 					<input type="file" name="image" class="custome-file-input">
 					<label class="custome-file-label"></label>
 					
 				</div>
-
-				
-			</div>
-			
+			</div>	
         </div>
         <div class="modal-footer">
            <button type="submit" class="btn btn-primary">Save Data</button>
@@ -240,10 +198,6 @@
   						<label>Name</label>
   						<input type="text" class="form-control" name="name" placeholder="Enter Your Name">
   					</div>
-  					<!-- <div class="form-group">
-  						<label>Occupation</label>
-  						<input type="text" class="form-control" placeholder="Enter Student Today's Occupation" name="ocup">
-  					</div> -->
   					<div class="form-group">
   						<label>Desciption </label>
   						<input type="text" class="form-control" placeholder="Enter Description here" name="description">
@@ -255,8 +209,6 @@
   							<label class="custome-file-label"></label>
 
   						</div>
-
-
   					</div>
 
   				</div>

@@ -54,12 +54,7 @@ class Achievmentcontroller extends Controller{
      	if ($pendingMembers5 > 3) {
      		$pendingMembers5 = 3;
      	}
-		 
-
-		
-		
-		
-				
+		 		
 		return view('achievment',compact('data','datam','datamy2','dataoa','dataay','dataoay','pendingMembers','pendingMembers1','pendingMembers2','pendingMembers3','pendingMembers4','pendingMembers5'));
 		
 	}
@@ -92,34 +87,10 @@ class Achievmentcontroller extends Controller{
 		$pendingMembers4 = AOlevel::where('year', $dataay[1])
 		 				->where('class','A_level')->count();
 		 $pendingMembers5 = AOlevel::where('year', $dataay[2])
-		 				->where('class','A_level')->count();
-     	// if ($pendingMembers > 3) {
-     	// 	$pendingMembers = 3;
-     	// }
-     	// if ($pendingMembers1 > 3) {
-     	// 	$pendingMembers1 = 3;
-     	// }
-     	// if ($pendingMembers2 > 3) {
-     	// 	$pendingMembers2 = 3;
-     	// }
-     	// if ($pendingMembers3 > 3) {
-     	// 	$pendingMembers3 = 3;
-     	// }
-     	// if ($pendingMembers4 > 3) {
-     	// 	$pendingMembers4 = 3;
-     	// }
-     	// if ($pendingMembers5 > 3) {
-     	// 	$pendingMembers5 = 3;
-     	// }
-		 
-
-		
-		
-		
+		 				->where('class','A_level')->count();		
 				
 		return view('AOlevel_achievment',compact('dataoa','dataay','dataoay','pendingMembers','pendingMembers1','pendingMembers2','pendingMembers3','pendingMembers4','pendingMembers5'));
 		
-
 	}
 	public function matric(){
 		$data = iachiev::all();

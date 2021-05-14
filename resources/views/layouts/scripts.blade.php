@@ -2,9 +2,9 @@
 			<script src="js/jquery.min.js"></script><script src="js/bootstrap.min.js"></script>
             {{-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> --}}
                       <script defer src="js/owl.carousel.min.js"type="text/javascript"></script>
-                      {{-- <script async defer
+                     <script  defer
               src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGrI5mdHSxIrhwNPWub4sFbPqT5iwSwTw&callback=initMap">
-              </script> --}}
+              </script>
                       <script defer type="text/javascript">
                                 $(document).ready(function() {
                                 var slider1 = $("#owl-c");

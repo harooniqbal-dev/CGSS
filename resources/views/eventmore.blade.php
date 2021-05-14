@@ -1,4 +1,83 @@
-<!DOCTYPE html>
+@extends('app')
+@section('title', 'Event Detail')
+
+@section('cssfile')
+<link rel="stylesheet" type="text/css" href="{{asset('newcssfile/eventdetail.css')}}">
+@endsection
+
+@section('content')
+    <div class="event__info">
+			<h2 class="heading__style">
+				Event Detail	
+			</h2>
+            <div class="event__detail">
+                <div class="event__image">
+                    <img class="img-responsive"src="{{ asset('upload/events/'.$data2->event_image)}}" 
+                    >
+                </div>
+            <div class="event__description">
+    
+                <div class="event_div">
+                        <div>
+                            <h2 class="event_title_more" style="text-align:left ; ">{{$data2->event_name}}</h2>
+                        </div>
+                        <div>
+                            <h4>{{$data2->event_date}}</h4>
+                        </div>
+                </div>
+                <p class="event_more_des" style="margin-bottom: 50px; text-align: justify;">{{$data2->event_description}}</p>
+            </div>
+        </div>
+	</div>
+
+@endsection
+
+
+
+
+{{-- @extends('app')
+@section('title', 'EVENT DETAIL')
+@section('content')
+
+<div class="container">
+    <div class="container event_more">
+
+
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-sm-6">
+                <img class="img-responsive"src="{{ asset('upload/events/'.$data2->event_image)}}" 
+                >
+            </div>
+        <div class="col-lg-6 col-sm-6 col-md-6 col-sm-6">
+
+            <div class="event_div">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 col-md-6 col-sm-6">
+                        <h2 class="event_title_more" style="text-align:left ; ">{{$data2->event_name}}</h2>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6 col-sm-6">
+                        <h4  style="text-align:right; font-family: 'Roboto Slab', Serif;
+             padding-top: 43px;
+             padding-bottom: 20px;
+             margin-bottom: 51px;">{{$data2->event_date}}</h4>
+                    </div>
+                </div>
+            </div>
+            <p class="event_more_des" style="margin-bottom: 50px; text-align: justify;">{{$data2->event_description}}</p>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    
+@endsection --}}
+
+
+
+
+
+{{-- <!DOCTYPE html>
 <html>
 <head>
 	<title>
@@ -122,6 +201,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="container">
         	<div class="container event_more">
         		<div class="row">
@@ -129,9 +210,6 @@
         				<img class="img-responsive"src="{{ asset('upload/events/'.$data2->event_image)}}" 
         				>
         			</div>
-
-
-        		
         		<div class="col-lg-6 col-sm-6 col-md-6 col-sm-6">
 
         			<div class="event_div">
@@ -141,30 +219,16 @@
         					</div>
         					<div class="col-lg-6 col-sm-6 col-md-6 col-sm-6">
         						<h4  style="text-align:right; font-family: 'Roboto Slab', Serif;
-	    padding-top: 43px;
-    padding-bottom: 20px;
-    
-    
-    margin-bottom: 51px;">{{$data2->event_date}}</h4>
+	                 padding-top: 43px;
+                     padding-bottom: 20px;
+                     margin-bottom: 51px;">{{$data2->event_date}}</h4>
         					</div>
-        					
         				</div>
-        				
-        				
-
         			</div>
-        			
         			<p class="event_more_des" style="margin-bottom: 50px; text-align: justify;">{{$data2->event_description}}</p>
         		</div>
         	</div>
         	</div>
-
-
-        		
-
-
-
-
         	</div>
         
 
@@ -257,4 +321,4 @@
        
 
 </body>
-</html>
+</html> --}}
