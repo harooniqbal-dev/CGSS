@@ -23,7 +23,7 @@
             <div class="table-responsive">
                 <table class="table table-striped table-borderd table-hover">
                     <thead>
-                        <th>Sr.</th>
+                        <th>Year</th>
                         <th>Name</th>
                         <th>Total</th></tr>
 
@@ -99,7 +99,7 @@
             <div class="table-responsive">
                 <table class="table table-striped table-borderd table-hover">
                     <thead>
-                        <th>Sr.</th>
+                        <th>Year</th>
                         <th>Name</th>
                         <th>Physics</th>
                         <th>Chemistry</th>

@@ -12,7 +12,7 @@
     </h2>
     <div class="achievement__div">
         <div class="left_table">
-            <h3 style="text-align: center">2020</h3>
+            <h3 style="text-align: center">Gold Medals</h3>
          <div class="table-responsive">
              <table class="table table-striped table-borderd table-hover">
                  <thead>
@@ -45,7 +45,7 @@
          </div>
         </div>
         <div class="middle_table">
-            <h3 style="text-align: center">2019</h3>
+            <h3 style="text-align: center">Silver Medals</h3>
          <div class="table-responsive">
              <table class="table table-striped table-borderd table-hover">
                  <thead>
@@ -77,7 +77,7 @@
          </div>
         </div>
         <div class="right_table">
-            <h3 style="text-align: center">2018</h3>
+            <h3 style="text-align: center">Bronze Medals</h3>
          <div class="table-responsive">
              <table class="table table-striped table-borderd table-hover">
                  <thead>

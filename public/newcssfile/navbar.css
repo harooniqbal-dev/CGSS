@@ -259,6 +259,11 @@ a:hover{
   .footer__section .footer__content:not(:last-child) {
     border-bottom: 1px solid #fff;
   }
+  .heading__style {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 2rem;
+  }
 }
 
 @media (max-width: 850px){

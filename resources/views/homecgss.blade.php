@@ -110,7 +110,7 @@
 			<span id="hide__modal">x</span>
 		  </div>
 		  <div class="modal__body">
-			{{$data->Description}}
+			{{-- {{$data->Description}} --}}
 			<h3>First Position in FBISE 2017 SSC-II Result</h3>
 			<p> <strong>SHEZEEN TARIQ</strong> scored 1st  position in FBISE 2017</p>
 			<p> <strong>KHADIJA KANWAL</strong> scored 5th position & </p>
